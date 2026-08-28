@@ -6,96 +6,60 @@
   <meta name="description" content="Skyken Digicom Ghost Production — professional EDM tracks made from scratch.">
   <title>Ghost Production — SKYKEN DIGICOM</title>
   <style>
-    *{box-sizing:border-box}
-    html{scroll-behavior:smooth}
-    body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#eef1f5;color:#111722}
-    a{text-decoration:none;color:inherit}
-    .header{height:88px;background:#f8fafc;border-bottom:1px solid #c9d1dc;display:flex;align-items:center;justify-content:space-between;padding:0 4%;position:sticky;top:0;z-index:10}
-    .logo{display:flex;align-items:center;gap:12px;font-weight:900;letter-spacing:2px}
-    .logo img{width:175px;max-height:62px;object-fit:contain}
-   .logo{
-  display:flex;
-  align-items:center;
-  gap:0;
-  font-weight:900;
-  letter-spacing:2px;
-}
-  display:flex;
-  align-items:center;
-  gap:8px;
-}
-
-..logo img{
-  width:105px;
-  height:auto;
-  object-fit:contain;
-  margin:0;
-}
-}
-
-.logo span {
-  display: flex;
-  flex-direction: column;
-  line-height: 1;
-}
-
-.logo strong {
-  font-size: 22px;
-  letter-spacing: 3px;
-}
-
-.logo small {
-  font-size: 11px;
-  letter-spacing: 4px;
-  margin-top: 4px;
-}
-    .nav{display:flex;gap:34px;align-items:center;font-weight:800;font-size:14px}
-    .nav a:hover{color:#1858c8}
-    .cta{border:1px solid #8d9bad;border-radius:10px;padding:14px 22px;font-weight:800}
-    .hero{min-height:520px;display:flex;align-items:center;padding:70px 6%;position:relative;overflow:hidden;background:linear-gradient(90deg,#edf1f5 0%,#edf1f5 39%,rgba(237,241,245,.88) 48%,rgba(237,241,245,.08) 100%),url("hero ghost production.png") center/cover no-repeat}
-    .hero-content{max-width:680px;position:relative;z-index:1}
-    .eyebrow{font-size:14px;font-weight:900;letter-spacing:1.5px;margin-bottom:18px}
-    h1{font-size:clamp(46px,7vw,88px);line-height:.92;margin:0 0 24px;font-weight:950;letter-spacing:-3px}
-    h1 span{color:#1760d7}
-    .lead{font-size:21px;line-height:1.55;max-width:620px;color:#303946}
-    .buttons{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
-    .btn{padding:15px 24px;border-radius:9px;font-weight:900;border:1px solid #9ba8b8}
-    .btn.primary{background:#17498e;color:white;border-color:#17498e}
-    section{padding:76px 6%}
-    .section-label{font-size:13px;font-weight:900;letter-spacing:1.5px}
-    h2{font-size:52px;line-height:1;margin:10px 0 42px;letter-spacing:-1px}
-    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-    .card{background:rgba(255,255,255,.62);border:1px solid #bcc7d5;border-radius:14px;padding:34px;box-shadow:0 8px 22px rgba(35,48,65,.06)}
-    .card h3{margin:0 0 12px;font-size:21px}
-    .card p{margin:0;color:#4a5564;line-height:1.6}
-    .steps{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-    .step-num{font-size:13px;font-weight:900;color:#1760d7;margin-bottom:16px}
-    .step h3{margin:0 0 10px}
-    .step p{color:#4a5564;line-height:1.55}
-    .dark{background:#111722;color:#fff}
-    .dark .section-label{color:#9dbfff}
-    .dark p{color:#c5ceda}
-    .faq{max-width:900px}
-    .faq-item{border-top:1px solid #394252;padding:22px 0}
-    .faq-item h3{margin:0 0 8px}
-    .faq-item p{margin:0}
-    .final{text-align:center}
-    .final h2{font-size:52px;margin-bottom:15px}
-    .final p{color:#566171;font-size:18px}
-    footer{padding:35px 6%;background:#0b0f16;color:#cbd3de;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px}
-    @media(max-width:900px){
-      .nav{display:none}.grid,.steps{grid-template-columns:1fr}
-      .hero{background:linear-gradient(90deg,#edf1f5 0%,rgba(237,241,245,.88) 70%,rgba(237,241,245,.45)),url("hero ghost production.png") center/cover}
-      h1{font-size:58px}
-    }
-  </style>
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font-family:Arial,Helvetica,sans-serif;background:#eef1f5;color:#111722}
+a{text-decoration:none;color:inherit}
+.header{min-height:88px;background:#f8fafc;border-bottom:1px solid #c9d1dc;display:flex;align-items:center;justify-content:space-between;padding:12px 6%;position:sticky;top:0;z-index:10}
+.logo{display:flex;align-items:center;flex:0 0 auto}
+.logo img{display:block;width:290px;height:auto;max-height:64px;object-fit:contain}
+.nav{display:flex;gap:34px;align-items:center;font-weight:800;font-size:14px}
+.nav a:hover{color:#1858c8}
+.cta{border:1px solid #8d9bad;border-radius:10px;padding:14px 22px;font-weight:800}
+.hero{min-height:560px;display:flex;align-items:center;padding:76px 6%;position:relative;overflow:hidden;background:linear-gradient(90deg,#edf1f5 0%,#edf1f5 38%,rgba(237,241,245,.90) 48%,rgba(237,241,245,.18) 70%,rgba(237,241,245,0) 100%),url("hero ghost production.png") center/cover no-repeat}
+.hero-content{max-width:700px;position:relative;z-index:1}
+.eyebrow{font-size:14px;font-weight:900;letter-spacing:1.5px;margin-bottom:18px}
+h1{font-size:clamp(52px,7vw,92px);line-height:.90;margin:0 0 24px;font-weight:950;letter-spacing:-3px}
+h1 span{color:#1760d7}
+.lead{font-size:21px;line-height:1.55;max-width:620px;color:#303946}
+.buttons{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+.btn{padding:15px 24px;border-radius:9px;font-weight:900;border:1px solid #9ba8b8}
+.btn.primary{background:#17498e;color:#fff;border-color:#17498e}
+section{padding:82px 6%}
+.section-label{font-size:13px;font-weight:900;letter-spacing:1.5px}
+h2{font-size:52px;line-height:1;margin:10px 0 42px;letter-spacing:-1px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.card{background:rgba(255,255,255,.72);border:1px solid #bcc7d5;border-radius:14px;padding:34px;box-shadow:0 8px 22px rgba(35,48,65,.06)}
+.card h3{margin:0 0 12px;font-size:21px}
+.card p{margin:0;color:#4a5564;line-height:1.6}
+.ownership{margin-top:20px;background:#fff;border:1px solid #bcc7d5;border-radius:14px;padding:32px;box-shadow:0 8px 22px rgba(35,48,65,.06)}
+.steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px}
+.step-num{font-size:13px;font-weight:900;color:#1760d7;margin-bottom:16px}
+.step h3{margin:0 0 10px}
+.step p{color:#4a5564;line-height:1.55}
+.dark{background:#111722;color:#fff}
+.dark .section-label{color:#9dbfff}
+.dark p{color:#c5ceda}
+.dark .card{background:#1a2230;border-color:#394252;box-shadow:none}
+.dark .card h3{color:#fff}
+.faq{max-width:900px}
+.faq-item{border-top:1px solid #394252;padding:22px 0}
+.faq-item h3{margin:0 0 8px}
+.faq-item p{margin:0}
+.final{text-align:center}
+.final h2{font-size:52px;margin-bottom:15px}
+.final p{color:#566171;font-size:18px}
+footer{padding:35px 6%;background:#0b0f16;color:#cbd3de;display:flex;justify-content:space-between;gap:20px;flex-wrap:wrap;font-size:13px}
+@media(max-width:1100px){.header{padding-left:4%;padding-right:4%}.nav{gap:20px}.logo img{width:250px}}
+@media(max-width:900px){.nav{display:none}.logo img{width:240px}.grid,.steps{grid-template-columns:1fr}.hero{min-height:620px;background:linear-gradient(90deg,#edf1f5 0%,rgba(237,241,245,.94) 48%,rgba(237,241,245,.55) 100%),url("hero ghost production.png") center/cover no-repeat}h1{font-size:58px}}
+@media(max-width:560px){.header{min-height:74px}.logo img{width:210px}section{padding:64px 6%}.hero{padding:60px 6%;min-height:600px}h1{font-size:48px;letter-spacing:-2px}h2,.final h2{font-size:40px}.lead{font-size:18px}}
+</style>
 </head>
 <body>
   <header class="header">
   <a class="logo" href="index.html" aria-label="Skyken Digicom home">
     <img src="SKYKEN%20DIGICOM%20LOGO%201.webp" alt="SKYKEN DIGICOM">
-    <span><strong>SKYKEN</strong><small>DIGICOM</small></span>
-</a>
+  </a>
     <nav class="nav">
       <a href="index.html">HOME</a>
       <a href="index.html#services">SERVICES</a>
@@ -128,7 +92,7 @@
         <div class="card"><h3>OPTIONAL SONGWRITING</h3><p>Lyrics can also be written on request, depending on the concept and direction of your project.</p></div>
         <div class="card"><h3>COMPLETE PROJECT DELIVERY</h3><p>You receive the FL Studio project, stems and relevant VST presets used for the production.</p></div>
       </div>
-      <div class="ownership" style="margin-top:20px;background:#fff;border:1px solid #bcc7d5;border-radius:14px;padding:32px;box-shadow:0 8px 22px rgba(35,48,65,.06)">
+      <div class="ownership">
         <div class="section-label" style="color:#1760d7">FULL COPYRIGHT OWNERSHIP</div>
         <h3 style="font-size:28px;margin:10px 0 12px">THE SONG BECOMES YOURS.</h3>
         <p style="margin:0;color:#4a5564;line-height:1.7;max-width:900px">
