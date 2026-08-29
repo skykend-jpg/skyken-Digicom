@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Skyken Digicom Vocal Presets — professional vocal processing presets for music production.">
+  <title>Vocal Presets — SKYKEN DIGICOM</title>
+  <style>
+
+.vp-mic{position:absolute;left:50%;top:45%;transform:translate(-50%,-50%);width:82px;height:125px;filter:drop-shadow(0 0 14px rgba(112,200,255,.75));}
+.mic-capsule{position:absolute;left:50%;top:0;transform:translateX(-50%);width:54px;height:35px;border:2px solid #d9efff;border-bottom:0;border-radius:28px 28px 12px 12px;background:linear-gradient(90deg,#718ba3,#dcefff,#6e879d);box-shadow:inset 0 0 12px rgba(255,255,255,.45);}
+.mic-grille{position:absolute;left:50%;top:12px;transform:translateX(-50%);width:48px;height:38px;border:1px solid rgba(225,245,255,.9);border-radius:18px;background:repeating-linear-gradient(0deg,rgba(20,39,58,.7) 0 2px,rgba(215,239,255,.8) 2px 4px);}
+.mic-body{position:absolute;left:50%;top:35px;transform:translateX(-50%);width:46px;height:52px;border:2px solid #c8e8ff;border-radius:10px 10px 16px 16px;background:linear-gradient(90deg,#506779,#b9d7e8 48%,#5d7486);box-shadow:inset 0 0 10px rgba(255,255,255,.25);}
+.mic-ring{position:absolute;left:50%;top:88px;transform:translateX(-50%);width:60px;height:18px;border:2px solid #9edcff;border-radius:50%;box-shadow:0 0 12px rgba(112,200,255,.55);}
+.mic-stem{position:absolute;left:50%;top:102px;transform:translateX(-50%);width:7px;height:17px;background:linear-gradient(90deg,#657c8d,#e2f4ff,#61798a);border-radius:4px;}
+.mic-base{position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:54px;height:8px;border:1px solid #c5e9ff;border-radius:8px;background:linear-gradient(90deg,#4d6476,#d8f2ff,#526a7c);box-shadow:0 0 10px rgba(112,200,255,.4);}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Arial,Helvetica,sans-serif;
+  background:#eef1f5;
+  color:#111722;
+}
+a{text-decoration:none;color:inherit}
+
+.header{
+  min-height:88px;
+  background:#f8fafc;
+  border-bottom:1px solid #c9d1dc;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:12px 6%;
+  position:sticky;
+  top:0;
+  z-index:20;
+}
+.logo{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  font-weight:900;
+  letter-spacing:2px;
+  flex:0 0 auto;
+}
+.logo img{
+  width:105px;
+  height:auto;
+  max-height:62px;
+  object-fit:contain;
+  display:block;
+  margin:0;
+}
+.logo span{
+  display:flex;
+  flex-direction:column;
+  line-height:1;
+}
+.logo strong{
+  font-size:22px;
+  letter-spacing:3px;
+}
+.logo small{
+  font-size:11px;
+  letter-spacing:4px;
+  margin-top:4px;
+  color:#8c96a4;
+}
+
+.nav{
+  display:flex;
+  gap:34px;
+  align-items:center;
+  font-weight:800;
+  font-size:14px;
+}
+.nav a{transition:color .2s ease}
+.nav a:hover{color:#1858c8}
+.cta{
+  border:1px solid #8d9bad;
+  border-radius:10px;
+  padding:14px 22px;
+  font-weight:800;
+}
+
+.hero{
+  min-height:560px;
+  display:flex;
+  align-items:center;
+  padding:76px 6%;
+  position:relative;
+  overflow:hidden;
+  background:
+    linear-gradient(
+      90deg,
+      #edf1f5 0%,
+      #edf1f5 37%,
+      rgba(237,241,245,.90) 49%,
+      rgba(237,241,245,.34) 67%,
+      rgba(237,241,245,0) 100%
+    ),
+    url("vocal presets.png") center/cover no-repeat;
+}
+.hero-content{
+  max-width:700px;
+  position:relative;
+  z-index:2;
+}
+.eyebrow{
+  font-size:14px;
+  font-weight:900;
+  letter-spacing:1.5px;
+  margin-bottom:18px;
+}
+h1{
+  font-size:clamp(54px,7vw,92px);
+  line-height:.90;
+  margin:0 0 24px;
+  font-weight:950;
+  letter-spacing:-3px;
+}
+h1 span{color:#1760d7}
+.lead{
+  font-size:21px;
+  line-height:1.55;
+  max-width:620px;
+  color:#303946;
+}
+.buttons{
+  display:flex;
+  gap:14px;
+  margin-top:30px;
+  flex-wrap:wrap;
+}
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:15px 24px;
+  border-radius:9px;
+  font-weight:900;
+  border:1px solid #9ba8b8;
+  transition:transform .2s ease,box-shadow .2s ease,background .2s ease;
+}
+.btn:hover{
+  transform:translateY(-1px);
+  box-shadow:0 7px 16px rgba(35,48,65,.10);
+}
+.btn.primary{
+  background:#17498e;
+  color:#fff;
+  border-color:#17498e;
+}
+
+section{padding:82px 6%}
+.section-label{
+  font-size:13px;
+  font-weight:900;
+  letter-spacing:1.5px;
+}
+h2{
+  font-size:clamp(44px,5vw,58px);
+  line-height:.98;
+  margin:10px 0 42px;
+  letter-spacing:-1.5px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  gap:20px;
+}
+.card{
+  background:rgba(255,255,255,.78);
+  border:1px solid #bcc7d5;
+  border-radius:14px;
+  padding:30px;
+  box-shadow:0 8px 22px rgba(35,48,65,.06);
+}
+.card h3{
+  margin:0 0 12px;
+  font-size:20px;
+}
+.card p{
+  margin:0;
+  color:#4a5564;
+  line-height:1.6;
+}
+
+.ownership{
+  margin-top:20px;
+  background:#fff;
+  border:1px solid #bcc7d5;
+  border-radius:14px;
+  padding:32px;
+  box-shadow:0 8px 22px rgba(35,48,65,.06);
+}
+.ownership h3{
+  font-size:28px;
+  margin:10px 0 12px;
+}
+.ownership p{
+  margin:0;
+  color:#4a5564;
+  line-height:1.7;
+  max-width:900px;
+}
+
+.dark{
+  background:#111722;
+  color:#fff;
+  padding-top:82px;
+  padding-bottom:82px;
+}
+.dark .section-label{color:#9dbfff}
+.dark h2{color:#fff}
+.dark .card{
+  background:#1a2230;
+  border-color:#394252;
+  box-shadow:none;
+}
+.dark .card h3{color:#fff}
+.dark .card p{color:#c5ceda}
+
+.steps{
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:18px;
+}
+.step{
+  min-width:0;
+}
+.step-num{
+  font-size:13px;
+  font-weight:900;
+  color:#1760d7;
+  margin-bottom:16px;
+}
+.step h3{margin:0 0 10px}
+.step p{
+  margin:0;
+  color:#c5ceda;
+  line-height:1.55;
+}
+
+.faq{max-width:900px}
+.faq-item{
+  border-top:1px solid #394252;
+  padding:22px 0;
+}
+.faq-item h3{margin:0 0 8px}
+.faq-item p{margin:0}
+
+.final{
+  text-align:center;
+  padding-top:78px;
+  padding-bottom:78px;
+}
+.final h2{
+  font-size:clamp(42px,5vw,56px);
+  margin-bottom:15px;
+}
+.final p{
+  color:#566171;
+  font-size:18px;
+  margin:0;
+}
+
+footer{
+  padding:35px 6%;
+  background:#0b0f16;
+  color:#cbd3de;
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+  flex-wrap:wrap;
+  font-size:13px;
+}
+
+@media(max-width:1100px){
+  .header{padding-left:4%;padding-right:4%}
+  .nav{gap:20px}
+}
+
+.premium-plugin-list{margin:0 0 42px;padding:22px 24px;border:1px solid rgba(132,199,255,.28);border-radius:16px;background:linear-gradient(145deg,rgba(50,83,120,.42),rgba(13,24,37,.72));max-width:900px}
+.plugin-list-title{font-size:11px;font-weight:900;letter-spacing:2px;color:#8fd7ff;margin-bottom:14px}
+.plugin-tags{display:flex;flex-wrap:wrap;gap:10px}
+.plugin-tags span{padding:9px 13px;border-radius:8px;border:1px solid rgba(151,216,255,.32);background:rgba(120,192,255,.08);color:#e2f5ff;font-size:11px;font-weight:900;letter-spacing:1px}
+.premium-plugin-list p{margin:14px 0 0;color:#9facbb;font-size:12px;line-height:1.6}
+@media(max-width:900px){
+  .nav{display:none}
+  .grid,.steps{grid-template-columns:1fr}
+  .hero{
+    min-height:620px;
+    background:
+      linear-gradient(
+        90deg,
+        #edf1f5 0%,
+        rgba(237,241,245,.94) 48%,
+        rgba(237,241,245,.55) 100%
+      ),
+      url("vocal presets.png") center/cover no-repeat;
+  }
+  h1{font-size:58px}
+}
+@media(max-width:560px){
+  .header{min-height:74px}
+  .logo img{width:92px}
+  .logo strong{font-size:19px}
+  .logo small{font-size:10px}
+  section{padding:64px 6%}
+  .hero{padding:60px 6%;min-height:600px}
+  h1{font-size:48px;letter-spacing:-2px}
+  h2{font-size:40px}
+  .lead{font-size:18px}
+  .card{padding:26px}
+  .ownership{padding:26px}
+}
+</style>
+</head>
+<body>
+  <header class="header">
+  <a class="logo" href="index.html" aria-label="Skyken Digicom home">
+    <img src="SKYKEN%20DIGICOM%20LOGO%201.webp" alt="SKYKEN DIGICOM">
+    <span><strong>SKYKEN</strong><small>DIGICOM</small></span>
+</a>
+    <nav class="nav">
+      <a href="index.html">HOME</a>
+      <a href="index.html#services">SERVICES</a>
+      <a href="index.html#products">PRODUCTS</a>
+      <a href="index.html#portfolio">PORTFOLIO</a>
+      <a href="index.html#about">ABOUT</a>
+      <a href="index.html#contact">CONTACT</a>
+      <a class="cta" href="#contact">HIRE ME →</a>
+    </nav>
+  </header>
+
+  <main>
+<style>
+.vp-section{padding:100px 6%;background:#f4f6f8;color:#142033}.vp-section.darkish{background:#111a27;color:#f5f8fc}
+.vp-section .section-label{color:#3b6fb6;font-size:12px;font-weight:900;letter-spacing:2px;margin-bottom:14px}
+.vp-section h2{font-size:clamp(34px,5vw,72px);line-height:.98;margin:0 0 18px;font-weight:900;letter-spacing:-2px}
+.vp-intro{max-width:760px;font-size:16px;line-height:1.75;color:#5d6877;margin-bottom:42px}.darkish .vp-intro{color:#b7c1ce}
+.vp-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px}
+.vp-card{display:flex;flex-direction:column;min-height:510px;border:1px solid #c7d0db;border-radius:18px;overflow:hidden;background:linear-gradient(145deg,#fff,#e6ebf0);box-shadow:0 12px 28px rgba(15,35,60,.10);padding-bottom:20px}
+.darkish .vp-card{background:linear-gradient(145deg,#1c2838,#101823);border-color:#3a4b5f}
+.vp-art{height:190px;position:relative;overflow:hidden;background:radial-gradient(circle at 50% 40%,rgba(92,191,255,.65),rgba(35,66,110,.38) 25%,rgba(12,20,31,.96) 72%)}
+.vp-glow{position:absolute;width:170px;height:170px;border:1px solid rgba(177,226,255,.45);border-radius:50%;left:50%;top:45%;transform:translate(-50%,-50%);box-shadow:0 0 35px rgba(104,202,255,.55),inset 0 0 30px rgba(104,202,255,.25)}
+
+.vp-wave{position:absolute;left:50%;bottom:20px;transform:translateX(-50%);display:flex;gap:5px;align-items:center;height:48px}.vp-wave i{display:block;width:4px;border-radius:8px;background:#9ce1ff;box-shadow:0 0 10px rgba(118,211,255,.85)}.vp-wave i:nth-child(1){height:14px}.vp-wave i:nth-child(2){height:28px}.vp-wave i:nth-child(3){height:45px}.vp-wave i:nth-child(4){height:32px}.vp-wave i:nth-child(5){height:48px}.vp-wave i:nth-child(6){height:24px}.vp-wave i:nth-child(7){height:13px}
+.vp-edition{position:absolute;right:14px;top:14px;padding:7px 9px;border-radius:7px;background:rgba(8,17,29,.7);border:1px solid rgba(157,218,255,.38);color:#dff4ff;font-size:9px;font-weight:900;letter-spacing:1px;text-align:right}
+.vp-type{margin:22px 22px 7px;color:#4278c7;font-size:10px;font-weight:900;letter-spacing:1.8px}.vp-card h3{margin:0 22px 13px;font-size:22px;line-height:1.15}.vp-genres{margin:0 22px 24px;color:#657181;line-height:1.65;font-size:13px}.darkish .vp-genres{color:#b8c2ce}
+.vp-actions{margin:auto 22px 0;display:grid;grid-template-columns:1fr 1fr;gap:10px}.vp-actions a{text-decoration:none;border-radius:9px;padding:13px 12px;font-size:12px;font-weight:900;text-align:center}.vp-buy{background:linear-gradient(145deg,#2157a3,#12366d);color:#fff;border:1px solid #173f78}.vp-demo{background:linear-gradient(#fff,#dfe6ed);color:#142033;border:1px solid #7e8c9c}
+
+.premium-plugin-list{margin:0 0 42px;padding:22px 24px;border:1px solid rgba(132,199,255,.28);border-radius:16px;background:linear-gradient(145deg,rgba(50,83,120,.42),rgba(13,24,37,.72));max-width:900px}
+.plugin-list-title{font-size:11px;font-weight:900;letter-spacing:2px;color:#8fd7ff;margin-bottom:14px}
+.plugin-tags{display:flex;flex-wrap:wrap;gap:10px}
+.plugin-tags span{padding:9px 13px;border-radius:8px;border:1px solid rgba(151,216,255,.32);background:rgba(120,192,255,.08);color:#e2f5ff;font-size:11px;font-weight:900;letter-spacing:1px}
+.premium-plugin-list p{margin:14px 0 0;color:#9facbb;font-size:12px;line-height:1.6}
+@media(max-width:900px){.vp-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:620px){.vp-grid{grid-template-columns:1fr}.vp-section{padding:72px 20px}}
+</style>
+<section class="hero"><div class="hero-content"><div class="eyebrow">SKYKEN DIGICOM · DIGITAL PRODUCTS</div><h1>VOCAL<br>PRESETS <span>→</span></h1><p class="lead">Professional vocal preset packs for FL Studio, available in FL Studio Stock Plugin Edition and Premium Plugin Edition.</p><div class="buttons"><a class="btn primary" href="#stock">EXPLORE PRESETS →</a><a class="btn" href="index.html#contact">CONTACT ME →</a></div></div></section>
+<section id="stock" class="vp-section"><div class="section-label">EDITION 01</div><h2>FL STUDIO STOCK<br>PLUGIN EDITION.</h2><p class="vp-intro">For producers who want to work with FL Studio's stock plugins. Each pack includes a BUY button for Payhip and a DEMO button for SoundCloud.</p><div class="vp-grid"><article class="vp-card">
+<div class="vp-art"><div class="vp-glow"></div><div class="vp-mic">
+  <div class="mic-capsule"></div>
+  <div class="mic-grille"></div>
+  <div class="mic-body"></div>
+  <div class="mic-ring"></div>
+  <div class="mic-stem"></div>
+  <div class="mic-base"></div>
+</div><div class="vp-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="vp-edition">FL STUDIO STOCK<br>PLUGIN EDITION</div></div>
+<div class="vp-type">VOCAL PRESET PACK</div><h3>POP VOCAL PRESETS VOL. 1</h3><p class="vp-genres">Modern Pop • Acoustic Pop • Ballad • Singer-Songwriter</p>
+<div class="vp-actions"><a class="vp-buy" href="https://payhip.com/" target="_blank" rel="noopener">BUY →</a><a class="vp-demo" href="https://soundcloud.com/" target="_blank" rel="noopener">DEMO ▶</a></div>
+</article>
+<article class="vp-card">
+<div class="vp-art"><div class="vp-glow"></div><div class="vp-mic">
+  <div class="mic-capsule"></div>
+  <div class="mic-grille"></div>
+  <div class="mic-body"></div>
+  <div class="mic-ring"></div>
+  <div class="mic-stem"></div>
+  <div class="mic-base"></div>
+</div><div class="vp-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="vp-edition">FL STUDIO STOCK<br>PLUGIN EDITION</div></div>
+<div class="vp-type">VOCAL PRESET PACK</div><h3>EDM VOCAL PRESETS VOL. 1</h3><p class="vp-genres">House • Deep House • Progressive • Tech House • Dance</p>
+<div class="vp-actions"><a class="vp-buy" href="https://payhip.com/" target="_blank" rel="noopener">BUY →</a><a class="vp-demo" href="https://soundcloud.com/" target="_blank" rel="noopener">DEMO ▶</a></div>
+</article>
+<article class="vp-card">
+<div class="vp-art"><div class="vp-glow"></div><div class="vp-mic">
+  <div class="mic-capsule"></div>
+  <div class="mic-grille"></div>
+  <div class="mic-body"></div>
+  <div class="mic-ring"></div>
+  <div class="mic-stem"></div>
+  <div class="mic-base"></div>
+</div><div class="vp-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="vp-edition">FL STUDIO STOCK<br>PLUGIN EDITION</div></div>
+<div class="vp-type">VOCAL PRESET PACK</div><h3>ATMOSPHERIC VOCAL FX VOL. 1</h3><p class="vp-genres">Dreamy • Ethereal • Ambient • Cinematic • Space</p>
+<div class="vp-actions"><a class="vp-buy" href="https://payhip.com/" target="_blank" rel="noopener">BUY →</a><a class="vp-demo" href="https://soundcloud.com/" target="_blank" rel="noopener">DEMO ▶</a></div>
+</article>
+<article class="vp-card">
+<div class="vp-art"><div class="vp-glow"></div><div class="vp-mic">
+  <div class="mic-capsule"></div>
+  <div class="mic-grille"></div>
+  <div class="mic-body"></div>
+  <div class="mic-ring"></div>
+  <div class="mic-stem"></div>
+  <div class="mic-base"></div>
+</div><div class="vp-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="vp-edition">FL STUDIO STOCK<br>PLUGIN EDITION</div></div>
+<div class="vp-type">VOCAL PRESET PACK</div><h3>HIP-HOP & TRAP VOCAL PRESETS VOL. 1</h3><p class="vp-genres">Rap • Trap • Dark • Aggressive • Modern</p>
+<div class="vp-actions"><a class="vp-buy" href="https://payhip.com/" target="_blank" rel="noopener">BUY →</a><a class="vp-demo" href="https://soundcloud.com/" target="_blank" rel="noopener">DEMO ▶</a></div>
+</article>
+<article class="vp-card">
+<div class="vp-art"><div class="vp-glow"></div><div class="vp-mic">
+  <div class="mic-capsule"></div>
+  <div class="mic-grille"></div>
+  <div class="mic-body"></div>
+  <div class="mic-ring"></div>
+  <div class="mic-stem"></div>
+  <div class="mic-base"></div>
+</div><div class="vp-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="vp-edition">FL STUDIO STOCK<br>PLUGIN EDITION</div></div>
+<div class="vp-type">VOCAL PRESET PACK</div><h3>R&B VOCAL PRESETS VOL. 1</h3><p class="vp-genres">Smooth • Warm • Intimate • Soulful • Modern</p>
+<div class="vp-actions"><a class="vp-buy" href="https://payhip.com/" target="_blank" rel="noopener">BUY →</a><a class="vp-demo" href="https://soundcloud.com/" target="_blank" rel="noopener">DEMO ▶</a></div>
+</article></div></section>
+<section id="premium" class="vp-section darkish"><div class="section-label">EDITION 02</div><h2>PREMIUM<br>PLUGIN EDITION.</h2><p class="vp-intro">The same vocal preset collections in a Premium Plugin Edition for workflows using professional third-party plugins. This edition uses plugins from Waves, FabFilter, Valhalla, iZotope Ozone and soothe2 by oeksound. Each product has separate BUY and DEMO buttons.</p>
+<div class="premium-plugin-list">
+  <div class="plugin-list-title">PREMIUM PLUGINS USED</div>
+  <div class="plugin-tags">
+    <span>WAVES</span>
+    <span>FABFILTER</span>
+    <span>VALHALLA</span>
+    <span>iZOTOPE OZONE</span>
+    <span>oeksound soothe2</span>
+  </div>
+  <p>Specific plugins may vary depending on the vocal preset pack and processing requirements.</p>
+</div>
+<div class="vp-grid"><article class="vp-card">
+<div class="vp-art"><div class="vp-glow"></div><div class="vp-mic">
+  <div class="mic-capsule"></div>
+  <div class="mic-grille"></div>
+  <div class="mic-body"></div>
+  <div class="mic-ring"></div>
+  <div class="mic-stem"></div>
+  <div class="mic-base"></div>
+</div><div class="vp-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="vp-edition">PREMIUM<br>PLUGIN EDITION</div></div>
+<div class="vp-type">VOCAL PRESET PACK</div><h3>POP VOCAL PRESETS VOL. 1</h3><p class="vp-genres">Modern Pop • Acoustic Pop • Ballad • Singer-Songwriter</p>
+<div class="vp-actions"><a class="vp-buy" href="https://payhip.com/" target="_blank" rel="noopener">BUY →</a><a class="vp-demo" href="https://soundcloud.com/" target="_blank" rel="noopener">DEMO ▶</a></div>
+</article>
+<article class="vp-card">
+<div class="vp-art"><div class="vp-glow"></div><div class="vp-mic">
+  <div class="mic-capsule"></div>
+  <div class="mic-grille"></div>
+  <div class="mic-body"></div>
+  <div class="mic-ring"></div>
+  <div class="mic-stem"></div>
+  <div class="mic-base"></div>
+</div><div class="vp-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="vp-edition">PREMIUM<br>PLUGIN EDITION</div></div>
+<div class="vp-type">VOCAL PRESET PACK</div><h3>EDM VOCAL PRESETS VOL. 1</h3><p class="vp-genres">House • Deep House • Progressive • Tech House • Dance</p>
+<div class="vp-actions"><a class="vp-buy" href="https://payhip.com/" target="_blank" rel="noopener">BUY →</a><a class="vp-demo" href="https://soundcloud.com/" target="_blank" rel="noopener">DEMO ▶</a></div>
+</article>
+<article class="vp-card">
+<div class="vp-art"><div class="vp-glow"></div><div class="vp-mic">
+  <div class="mic-capsule"></div>
+  <div class="mic-grille"></div>
+  <div class="mic-body"></div>
+  <div class="mic-ring"></div>
+  <div class="mic-stem"></div>
+  <div class="mic-base"></div>
+</div><div class="vp-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="vp-edition">PREMIUM<br>PLUGIN EDITION</div></div>
+<div class="vp-type">VOCAL PRESET PACK</div><h3>ATMOSPHERIC VOCAL FX VOL. 1</h3><p class="vp-genres">Dreamy • Ethereal • Ambient • Cinematic • Space</p>
+<div class="vp-actions"><a class="vp-buy" href="https://payhip.com/" target="_blank" rel="noopener">BUY →</a><a class="vp-demo" href="https://soundcloud.com/" target="_blank" rel="noopener">DEMO ▶</a></div>
+</article>
+<article class="vp-card">
+<div class="vp-art"><div class="vp-glow"></div><div class="vp-mic">
+  <div class="mic-capsule"></div>
+  <div class="mic-grille"></div>
+  <div class="mic-body"></div>
+  <div class="mic-ring"></div>
+  <div class="mic-stem"></div>
+  <div class="mic-base"></div>
+</div><div class="vp-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="vp-edition">PREMIUM<br>PLUGIN EDITION</div></div>
+<div class="vp-type">VOCAL PRESET PACK</div><h3>HIP-HOP & TRAP VOCAL PRESETS VOL. 1</h3><p class="vp-genres">Rap • Trap • Dark • Aggressive • Modern</p>
+<div class="vp-actions"><a class="vp-buy" href="https://payhip.com/" target="_blank" rel="noopener">BUY →</a><a class="vp-demo" href="https://soundcloud.com/" target="_blank" rel="noopener">DEMO ▶</a></div>
+</article>
+<article class="vp-card">
+<div class="vp-art"><div class="vp-glow"></div><div class="vp-mic">
+  <div class="mic-capsule"></div>
+  <div class="mic-grille"></div>
+  <div class="mic-body"></div>
+  <div class="mic-ring"></div>
+  <div class="mic-stem"></div>
+  <div class="mic-base"></div>
+</div><div class="vp-wave"><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class="vp-edition">PREMIUM<br>PLUGIN EDITION</div></div>
+<div class="vp-type">VOCAL PRESET PACK</div><h3>R&B VOCAL PRESETS VOL. 1</h3><p class="vp-genres">Smooth • Warm • Intimate • Soulful • Modern</p>
+<div class="vp-actions"><a class="vp-buy" href="https://payhip.com/" target="_blank" rel="noopener">BUY →</a><a class="vp-demo" href="https://soundcloud.com/" target="_blank" rel="noopener">DEMO ▶</a></div>
+</article></div></section>
+<section class="final"><div class="section-label">SKYKEN DIGICOM PRODUCTS</div><h2>FIND YOUR<br>VOCAL SOUND.</h2><p>Choose your edition, listen to the demo, then get the preset pack through Payhip.</p><div class="buttons" style="justify-content:center"><a class="btn primary" href="#stock">STOCK EDITION →</a><a class="btn" href="#premium">PREMIUM EDITION →</a></div></section>
+</main>
+
+  <footer>
+    <div><strong>SKYKEN DIGICOM</strong> · CREATE SOUNDS. BUILD EMOTIONS. INSPIRE THE WORLD.</div>
+    <div>© 2026 SKYKEN DIGICOM · All Rights Reserved.</div>
+  </footer>
+</body>
+</html>
