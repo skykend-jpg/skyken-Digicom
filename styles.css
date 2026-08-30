@@ -283,3 +283,88 @@
     transition:none!important;
   }
 }
+
+
+/* =========================================================
+   FINAL HOME INTERACTIONS
+   Product mockups are clickable, and CTA buttons glow blue.
+   ========================================================= */
+
+/* Make only the mockup image itself a clickable product link */
+#products .product .product-main-link{
+  display:block;
+  margin-top:0 !important;
+  position:relative;
+  z-index:3;
+  border-radius:6px;
+  cursor:pointer;
+}
+
+#products .product .product-main-link img{
+  pointer-events:none;
+}
+
+/* Keep the existing View Collection button clearly clickable */
+#products .product .product-collection-link{
+  position:relative;
+  z-index:4;
+  cursor:pointer;
+}
+
+/* All main CTA / navigation buttons: smooth zoom + blue glow */
+.btn,
+.shop-btn{
+  transform:translateZ(0);
+  transition:
+    transform .24s cubic-bezier(.2,.8,.2,1),
+    box-shadow .24s ease,
+    background-color .24s ease,
+    border-color .24s ease,
+    color .24s ease;
+  will-change:transform, box-shadow;
+}
+
+.btn:hover,
+.shop-btn:hover{
+  transform:scale(1.07);
+  box-shadow:
+    0 0 0 1px rgba(91,190,255,.35),
+    0 0 16px rgba(54,154,255,.72),
+    0 0 34px rgba(36,113,255,.42);
+  border-color:rgba(89,187,255,.95);
+}
+
+.btn.primary:hover{
+  background:#1d57aa;
+}
+
+.btn.ghost:hover,
+.shop-btn:hover{
+  background:#f7fbff;
+}
+
+/* Footer social links become individually clickable */
+footer .social-links{
+  display:flex;
+  flex-wrap:wrap;
+  align-items:center;
+  gap:4px;
+}
+
+footer .social-links a{
+  display:inline-block;
+  color:#b8c0ca;
+  transition:color .2s ease, text-shadow .2s ease, transform .2s ease;
+}
+
+footer .social-links a:hover{
+  color:#8bd7ff;
+  text-shadow:0 0 12px rgba(78,181,255,.75);
+  transform:translateY(-1px);
+}
+
+@media(max-width:700px){
+  footer .social-links{
+    gap:3px;
+  }
+}
