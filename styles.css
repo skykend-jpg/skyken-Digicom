@@ -6,35 +6,94 @@
 
 
 /* =========================================================
-   NEW HOME PORTFOLIO CARDS
-   Replaces the old portfolio image cards only
+   HOME PORTFOLIO — TRANSPARENT CLICKABLE IMAGE CARDS
+   Uses: portoghost.png / portoremix.png / portorelease.png
    ========================================================= */
-.portfolio-grid-new{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:25px}
-.portfolio-card{min-height:300px;display:block;border:1px solid #aab4c0;border-radius:12px;overflow:hidden;background:linear-gradient(145deg,#f7f9fb,#e1e6eb);box-shadow:0 7px 16px rgba(28,39,53,.10);transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
-.portfolio-card:hover{transform:translateY(-5px);box-shadow:0 15px 28px rgba(28,39,53,.16);border-color:#7e9dcc}
-.portfolio-art{height:142px;position:relative;overflow:hidden;display:grid;place-items:center}
-.portfolio-copy{padding:16px 18px 18px}.portfolio-copy>span{font-size:8px;font-weight:900;letter-spacing:1.25px;color:#3266aa}
-.portfolio-copy h3{font-family:Orbitron,Inter,sans-serif;font-size:15px;line-height:1.2;margin:8px 0;letter-spacing:.2px}
-.portfolio-copy p{font-size:10px;line-height:1.5;color:#4d5968;margin:0 0 13px}.portfolio-copy b{font-size:9px;letter-spacing:.7px;color:#1d4d91}
+.portfolio-circle-grid{
+  display:grid;
+  grid-template-columns:repeat(3,minmax(0,1fr));
+  align-items:center;
+  gap:18px;
+  width:100%;
+}
 
-/* GHOST PRODUCTION */
-.ghost-art-new{background:radial-gradient(circle at 50% 47%,#d8e6f3 0 8%,#8aa7c3 9% 10%,transparent 11%),linear-gradient(135deg,#172636,#405b74 52%,#b8c7d6)}
-.ghost-art-new:before,.ghost-art-new:after{content:"";position:absolute;border:1px solid rgba(255,255,255,.25);border-radius:50%}
-.ghost-art-new:before{width:190px;height:190px}.ghost-art-new:after{width:122px;height:122px;border-color:rgba(125,188,255,.72)}
-.core-letter{z-index:3;width:62px;height:62px;border:1px solid rgba(218,240,255,.95);border-radius:50%;display:grid;place-items:center;font-family:Orbitron,Inter,sans-serif;font-size:28px;color:#fff;text-shadow:0 0 16px #b6dcff;box-shadow:0 0 28px rgba(132,193,255,.32)}
-.orbit{position:absolute;border:1px solid rgba(171,218,255,.35);border-radius:50%}.orbit-1{width:250px;height:86px;transform:rotate(-23deg)}.orbit-2{width:220px;height:76px;transform:rotate(38deg)}
+.portfolio-circle-card{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-width:0;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+  cursor:pointer;
+  -webkit-tap-highlight-color:transparent;
+  transition:filter .25s ease;
+}
 
-/* REMIX PROJECTS */
-.remix-art-new{background:linear-gradient(135deg,#10243c,#356c9f 48%,#9ed5ef)}
-.remix-art-new:before{content:"";position:absolute;width:130%;height:130%;background:repeating-linear-gradient(100deg,transparent 0 17px,rgba(255,255,255,.10) 18px 20px);transform:rotate(-8deg)}
-.remix-art-new .core-letter{border-radius:0;clip-path:polygon(50% 0,100% 22%,100% 78%,50% 100%,0 78%,0 22%);background:rgba(10,35,60,.28)}
-.wave-line{position:absolute;border-top:2px solid rgba(225,250,255,.8);border-radius:50%;z-index:2}.wave-line-1{width:240px;height:72px;transform:rotate(-13deg)}.wave-line-2{width:190px;height:48px;transform:rotate(12deg);opacity:.6}
+.portfolio-circle-card img{
+  display:block;
+  width:100%;
+  max-width:420px;
+  height:auto;
+  object-fit:contain;
+  background:transparent;
+  border:0;
+  box-shadow:none;
+  transition:transform .25s ease,filter .25s ease;
+  will-change:transform;
+}
 
-/* RELEASED MUSIC */
-.release-art-new{background:linear-gradient(135deg,#202a36,#647d97 55%,#d4dde5)}
-.disc{position:absolute;width:94px;height:94px;border-radius:50%;background:radial-gradient(circle,#dce9f3 0 5%,#4e6680 6% 12%,#c1d1de 13% 18%,#25384b 19% 62%,#718aa1 63% 66%,#223346 67%);box-shadow:0 8px 16px rgba(0,0,0,.25)}
-.d1{transform:translate(-56px,15px) rotate(25deg)}.d2{transform:translate(56px,-14px) rotate(-18deg)}.d3{transform:translate(0,40px) scale(.84)}
-.release-mark{position:relative;z-index:3;font-size:43px;color:#eaf7ff;text-shadow:0 0 24px rgba(132,205,255,.8)}
+.portfolio-circle-card:hover img{
+  transform:scale(1.045);
+  filter:drop-shadow(0 12px 18px rgba(30,90,170,.22));
+}
 
-@media(max-width:900px){.portfolio-grid-new{grid-template-columns:repeat(2,1fr)}}
-@media(max-width:700px){.portfolio-grid-new{grid-template-columns:1fr}}
+.portfolio-circle-card:active img{
+  transform:scale(.985);
+}
+
+/* Gentle floating/bouncing motion so visitors know the cards are interactive */
+@keyframes portfolioCardBob{
+  0%,100%{transform:translateY(0)}
+  50%{transform:translateY(-11px)}
+}
+
+.card-bob-1 img{
+  animation:portfolioCardBob 2.7s ease-in-out infinite;
+}
+
+.card-bob-2 img{
+  animation:portfolioCardBob 2.7s ease-in-out .35s infinite;
+}
+
+.card-bob-3 img{
+  animation:portfolioCardBob 2.7s ease-in-out .7s infinite;
+}
+
+@media(max-width:900px){
+  .portfolio-circle-grid{
+    grid-template-columns:repeat(2,minmax(0,1fr));
+    gap:14px;
+  }
+
+  .portfolio-circle-card img{
+    max-width:390px;
+  }
+}
+
+@media(max-width:700px){
+  .portfolio-circle-grid{
+    grid-template-columns:1fr;
+    gap:10px;
+  }
+
+  .portfolio-circle-card img{
+    width:min(100%,420px);
+  }
+}
+
+@media(prefers-reduced-motion:reduce){
+  .portfolio-circle-card img{
+    animation:none!important;
+  }
+}
