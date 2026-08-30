@@ -22,7 +22,7 @@ a{text-decoration:none;color:inherit}
 .nav a:hover{color:#1858c8}
 .cta{border:1px solid #8d9bad;border-radius:10px;padding:14px 22px;font-weight:800}
 
-.hero{min-height:560px;display:flex;align-items:center;padding:76px 6%;position:relative;overflow:hidden;background:linear-gradient(90deg,#edf1f5 0%,#edf1f5 38%,rgba(237,241,245,.93) 53%,rgba(237,241,245,.55) 72%,rgba(237,241,245,.15) 100%),url("hero flp.png") center/cover no-repeat}
+.hero{min-height:560px;display:flex;align-items:center;padding:76px 6%;position:relative;overflow:hidden;background:linear-gradient(90deg,#edf1f5 0%,#edf1f5 38%,rgba(237,241,245,.93) 53%,rgba(237,241,245,.55) 72%,rgba(237,241,245,.15) 100%),url("product-flp.webp") center/cover no-repeat}
 .hero-content{max-width:720px;position:relative;z-index:2}
 .eyebrow{font-size:14px;font-weight:900;letter-spacing:1.5px;margin-bottom:18px}
 h1{font-size:clamp(54px,7vw,92px);line-height:.90;margin:0 0 24px;font-weight:950;letter-spacing:-3px}
@@ -59,8 +59,23 @@ footer{padding:35px 6%;background:#0b0f16;color:#cbd3de;display:flex;justify-con
 footer strong{color:#fff;letter-spacing:1px}
 
 @media(max-width:1100px){.header{padding-left:4%;padding-right:4%}.nav{gap:20px}}
-@media(max-width:900px){.nav{display:none}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{min-height:620px;background:linear-gradient(90deg,#edf1f5 0%,rgba(237,241,245,.94) 48%,rgba(237,241,245,.55) 100%),url("hero flp.png") center/cover no-repeat}h1{font-size:58px}}
+@media(max-width:900px){.nav{display:none}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{min-height:620px;background:linear-gradient(90deg,#edf1f5 0%,rgba(237,241,245,.94) 48%,rgba(237,241,245,.55) 100%),url("product-flp.webp") center/cover no-repeat}h1{font-size:58px}}
 @media(max-width:560px){.header{min-height:74px}.logo img{width:92px}.logo strong{font-size:19px}.logo small{font-size:10px}section{padding:64px 6%}.hero{padding:60px 6%;min-height:600px}h1{font-size:48px;letter-spacing:-2px}h2{font-size:40px}.lead{font-size:18px}.product-grid{grid-template-columns:1fr}.product-card{padding:26px;min-height:370px}footer{flex-direction:column}}
+
+/* CLICKABLE GENRE CARDS */
+.product-card{
+  cursor:pointer;
+  transition:transform .22s ease,box-shadow .22s ease,border-color .22s ease;
+}
+.product-card:hover{
+  transform:translateY(-5px);
+  border-color:#8fb9e8;
+  box-shadow:0 14px 30px rgba(35,84,145,.14),0 0 22px rgba(75,171,255,.12);
+}
+.product-card:active{
+  transform:translateY(-2px) scale(.985);
+}
+
 </style>
 </head>
 <body>
@@ -100,113 +115,101 @@ footer strong{color:#fff;letter-spacing:1px}
   <p class="note">Choose a genre and explore FL Studio project files built around its arrangement, sound and production style.</p>
   <div class="product-grid">
 
-        <article class="product-card">
+        <a class="product-card" href="SKYKEN-TECH-HOUSE-FLP-12-PRODUCTS-BUY-DEMO-FINAL.html" aria-label="Open TECH HOUSE FLP collection">
           <div class="product-art">
             <div class="genre-logo" aria-hidden="true"><span>⌁</span></div>
           </div>
           <h3>TECH HOUSE FLP</h3>
           <p>Modern tech-house grooves, punchy drums and club-focused arrangements.</p>
-          <a class="btn" href="#">VIEW COLLECTION →</a>
-        </article>
+          <span class="btn">VIEW COLLECTION →</span></a>
 
-        <article class="product-card">
+        <a class="product-card" href="SKYKEN-DEEP-HOUSE-FLP-TEMPLATES-BUY-DEMO-FINAL.html" aria-label="Open DEEP HOUSE FLP collection">
           <div class="product-art">
             <div class="genre-logo" aria-hidden="true"><span>◉</span></div>
           </div>
           <h3>DEEP HOUSE FLP</h3>
           <p>Deep grooves, warm chords, atmospheric layers and smooth arrangements.</p>
-          <a class="btn" href="#">VIEW COLLECTION →</a>
-        </article>
+          <span class="btn">VIEW COLLECTION →</span></a>
 
-        <article class="product-card">
+        <a class="product-card" href="SKYKEN-MELODIC-HOUSE-FLP-TEMPLATES-BUY-DEMO-FINAL.html" aria-label="Open MELODIC HOUSE FLP collection">
           <div class="product-art">
             <div class="genre-logo" aria-hidden="true"><span>⌇</span></div>
           </div>
           <h3>MELODIC HOUSE FLP</h3>
           <p>Melodic movement, emotional harmony and evolving electronic arrangements.</p>
-          <a class="btn" href="#">VIEW COLLECTION →</a>
-        </article>
+          <span class="btn">VIEW COLLECTION →</span></a>
 
-        <article class="product-card">
+        <a class="product-card" href="SKYKEN-SLAP-HOUSE-FLP-TEMPLATES-BUY-DEMO-FINAL.html" aria-label="Open SLAP HOUSE FLP collection">
           <div class="product-art">
             <div class="genre-logo" aria-hidden="true"><span>⚡</span></div>
           </div>
           <h3>SLAP HOUSE FLP</h3>
           <p>Modern slap-house energy, bass-driven hooks and commercial drop structures.</p>
-          <a class="btn" href="#">VIEW COLLECTION →</a>
-        </article>
+          <span class="btn">VIEW COLLECTION →</span></a>
 
-        <article class="product-card">
+        <a class="product-card" href="SKYKEN-AFRO-HOUSE-FLP-TEMPLATES-BUY-DEMO-FINAL.html" aria-label="Open AFRO HOUSE FLP collection">
           <div class="product-art">
             <div class="genre-logo" aria-hidden="true"><span>◌</span></div>
           </div>
           <h3>AFRO HOUSE FLP</h3>
           <p>Percussion-led rhythms, organic movement and hypnotic house arrangements.</p>
-          <a class="btn" href="#">VIEW COLLECTION →</a>
-        </article>
+          <span class="btn">VIEW COLLECTION →</span></a>
 
-        <article class="product-card">
+        <a class="product-card" href="SKYKEN-TROPICAL-HOUSE-FLP-TEMPLATES-BUY-DEMO-FINAL.html" aria-label="Open TROPICAL HOUSE FLP collection">
           <div class="product-art">
             <div class="genre-logo" aria-hidden="true"><span>✦</span></div>
           </div>
           <h3>TROPICAL HOUSE FLP</h3>
           <p>Warm melodies, relaxed grooves and bright tropical electronic textures.</p>
-          <a class="btn" href="#">VIEW COLLECTION →</a>
-        </article>
+          <span class="btn">VIEW COLLECTION →</span></a>
 
-        <article class="product-card">
+        <a class="product-card" href="SKYKEN-PROGRESSIVE-HOUSE-FLP-TEMPLATES-BUY-DEMO-FINAL.html" aria-label="Open PROGRESSIVE HOUSE FLP collection">
           <div class="product-art">
             <div class="genre-logo" aria-hidden="true"><span>↗</span></div>
           </div>
           <h3>PROGRESSIVE HOUSE FLP</h3>
           <p>Long-form builds, layered movement and progressive energy development.</p>
-          <a class="btn" href="#">VIEW COLLECTION →</a>
-        </article>
+          <span class="btn">VIEW COLLECTION →</span></a>
 
-        <article class="product-card">
+        <a class="product-card" href="SKYKEN-BASS-HOUSE-FLP-TEMPLATES-BUY-DEMO-FINAL.html" aria-label="Open BASS HOUSE FLP collection">
           <div class="product-art">
             <div class="genre-logo" aria-hidden="true"><span>≈</span></div>
           </div>
           <h3>BASS HOUSE FLP</h3>
           <p>Heavy basslines, energetic grooves and powerful electronic drops.</p>
-          <a class="btn" href="#">VIEW COLLECTION →</a>
-        </article>
+          <span class="btn">VIEW COLLECTION →</span></a>
 
-        <article class="product-card">
+        <a class="product-card" href="SKYKEN-BIG-ROOM-FLP-TEMPLATES-BUY-DEMO-FINAL.html" aria-label="Open BIG ROOM FLP collection">
           <div class="product-art">
             <div class="genre-logo" aria-hidden="true"><span>▲</span></div>
           </div>
           <h3>BIG ROOM FLP</h3>
           <p>Festival-scale builds, big leads and high-impact EDM arrangements.</p>
-          <a class="btn" href="#">VIEW COLLECTION →</a>
-        </article>
+          <span class="btn">VIEW COLLECTION →</span></a>
 
-        <article class="product-card">
+        <a class="product-card" href="SKYKEN-TECHNO-FLP-TEMPLATES-BUY-DEMO-FINAL.html" aria-label="Open TECHNO FLP collection">
           <div class="product-art">
             <div class="genre-logo" aria-hidden="true"><span>◎</span></div>
           </div>
           <h3>TECHNO FLP</h3>
           <p>Driving rhythms, repetition, tension and underground electronic energy.</p>
-          <a class="btn" href="#">VIEW COLLECTION →</a>
-        </article>
+          <span class="btn">VIEW COLLECTION →</span></a>
 
-        <article class="product-card">
+        <a class="product-card" href="SKYKEN-TRANCE-FLP-TEMPLATES-BUY-DEMO-FINAL.html" aria-label="Open TRANCE FLP collection">
           <div class="product-art">
             <div class="genre-logo" aria-hidden="true"><span>◈</span></div>
           </div>
           <h3>TRANCE FLP</h3>
           <p>Uplifting melodies, emotional builds and expansive trance arrangements.</p>
-          <a class="btn" href="#">VIEW COLLECTION →</a>
-        </article>
+          <span class="btn">VIEW COLLECTION →</span></a>
 
-        <article class="product-card">
+        <a class="product-card" href="https://payhip.com/SkykenDigicom" aria-label="Open OTHER FLP collection">
           <div class="product-art">
             <div class="genre-logo" aria-hidden="true"><span>＋</span></div>
           </div>
           <h3>OTHER FLP</h3>
           <p>More styles and custom collections beyond the main genre categories.</p>
-          <a class="btn" href="#">VIEW COLLECTION →</a>
-        </article>
+          <span class="btn">VIEW COLLECTION →</span></a>
   </div>
 </section>
 
