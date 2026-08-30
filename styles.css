@@ -97,3 +97,60 @@
     animation:none!important;
   }
 }
+
+
+/* =========================================================
+   PORTFOLIO CARD SIZE FIX — compact 3 cards in one row
+   ========================================================= */
+#portfolio .portfolio-circle-grid{
+  display:grid !important;
+  grid-template-columns:repeat(3, minmax(0, 1fr)) !important;
+  gap:28px !important;
+  align-items:center !important;
+  width:100% !important;
+  max-width:1180px !important;
+  margin:0 auto !important;
+}
+
+#portfolio .portfolio-circle-card{
+  width:100% !important;
+  height:auto !important;
+  display:flex !important;
+  justify-content:center !important;
+  align-items:center !important;
+  overflow:visible !important;
+  background:transparent !important;
+}
+
+#portfolio .portfolio-circle-card img{
+  width:100% !important;
+  max-width:300px !important;
+  max-height:260px !important;
+  height:auto !important;
+  object-fit:contain !important;
+  margin:0 auto !important;
+}
+
+@media(max-width:900px){
+  #portfolio .portfolio-circle-grid{
+    grid-template-columns:repeat(3, minmax(0, 1fr)) !important;
+    gap:14px !important;
+  }
+
+  #portfolio .portfolio-circle-card img{
+    max-width:230px !important;
+    max-height:210px !important;
+  }
+}
+
+@media(max-width:650px){
+  #portfolio .portfolio-circle-grid{
+    grid-template-columns:1fr !important;
+    max-width:340px !important;
+  }
+
+  #portfolio .portfolio-circle-card img{
+    max-width:280px !important;
+    max-height:240px !important;
+  }
+}
